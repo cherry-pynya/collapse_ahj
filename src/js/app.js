@@ -1,4 +1,8 @@
 const btn = document.querySelector('.btn');
 btn.addEventListener('click', () => {
-  document.querySelector('.text-container').classList.toggle('invalid');
+  if (document.querySelector('.text-container').style.maxHeight) {
+    document.querySelector('.text-container').style.maxHeight = null;
+  } else {
+    document.querySelector('.text-container').style.maxHeight = `${document.querySelector('.text-container').scrollHeight}px`;
+  }
 });

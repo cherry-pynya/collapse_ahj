@@ -8,10 +8,6 @@ p {
     margin: 0;
 }
 
-.invalid[class] {
-    display:none;
-}
-
 .container {
     margin-top: 100px;
     width: 100%;
@@ -35,7 +31,9 @@ p {
 }
 
 .text-container {
+    max-height: 0;
     margin-top: 20px;
     border-radius: 10px;
-    border: 2px solid #a69ef7;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
 }
